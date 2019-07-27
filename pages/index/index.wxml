@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<!-- 綁定數據 -->
+<view bindtap="handleViewClick">{{msg}}</view>
+<!-- wx:for  遍歷數據 -->
+<view wx:for="{{students}}">{{item.name}}--{{item.gender}}</view>
+<!-- 事件監聽 -->
+<view>當前計數：{{count}}</view>
+<button bindtap="add" size="mini">+1</button>
+<button size="big" bindtap="reduce">-1</button>
+
+<view wx:for="{{list}}">
+  <view>{{item.title}}</view>
+  <image src="{{item.image}}"></image>
+  
+</view>

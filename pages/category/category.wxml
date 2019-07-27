@@ -1,0 +1,8 @@
+<!--pages/category/category.wxml-->
+<text>pages/category/category.wxml</text>
+<!-- 获取用户信息方式二 -->
+<button open-type="getUserInfo" 
+bindtap="handleGetUserInfo">获取用户授权</button>
+<!-- 获取用户信息方式三 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
