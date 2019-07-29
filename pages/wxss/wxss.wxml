@@ -1,0 +1,7 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- ipone6屏幕上  1px = 2rpx -->
+
+<view class='view1'></view>
+<text class="content1">哈哈哈</text>
+<view class="view2"></view>
+<text class="content2">呵呵呵</text>

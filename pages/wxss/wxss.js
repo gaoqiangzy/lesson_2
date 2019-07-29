@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/wxss/wxss.js
 Page({
 
   /**

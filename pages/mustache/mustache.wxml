@@ -1,0 +1,149 @@
+<!--pages/mustache/mustache.wxml-->
+<view>----mustache语法的基本使用---</view>
+<view>{{firstname}}</view>
+<view>{{lastname}}</view>
+<view>我是:{{firstname +'.'+ lastname}}</view>
+<view>{{age > 18 ? '成年人' : '未成年人'}}</view>
+<view>{{nowDate}}</view>
+
+<button bindtap="handlerSwitchColor" size="mini">改变颜色</button>
+<view class="box1 {{isActive ? 'active' : ''}}"></view>
+
+<button bindtap="handlerRandomColor" size="mini">随机改变颜色</button>
+<view class="{{randomColor}}" style="width:200rpx;height:200rpx;"></view>
+
+
+<view>-------wx:if-- wx:elif-----</view>
+<view wx:if='{{score >= 80}}'>优秀</view>
+<view wx:elif='{{score >=60}}'>及格</view>
+<view wx:elif='{{score < 60}}'>不及格</view>
+
+<!-- hidden  如果显示和隐藏切换的非常频繁选用-->
+<view>-----hidden-------</view>
+<view wx:if='{{false}}'>wx:if隐藏元素；组件也不存在</view>
+<view hidden="{{true}}">hidden隐藏元素；组件依然存在</view>
+
+
+<!-- wx:for 循环遍历 数组、字符串、数字 -->
+<view>--wx:for 循环遍历 数组、字符串、数字--</view>
+<view wx:for='{{colorList}}'>
+  <view>value:{{item}}----index:{{index}}</view>
+</view>
+
+<view wx:for='zhangsan'>
+  <view>{{item}}</view>
+</view>
+
+<view wx:for='{{9}}'>
+  <view>{{item}}</view>
+</view>
+
+<view>------------</view>
+<!-- block标签 是一个标签，不会被渲染到页面上，只是起到包裹组件的作用-->
+
+<!-- 需求：隐藏一堆的内容  全用hidden或wx:if 很麻烦-->
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+<view wx:if='{{true}}'>哈哈哈</view>
+
+<block wx:if='{{true}}'>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+</block>
+
+<!-- 与上面block标签相比，多渲染了一个view组件 -->
+<view wx:if='{{true}}'>
+   <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+  <view>呵呵呵</view>
+</view>
+
+
+<!-- 给item、index起别名 -->
+<view>----- 给item、index起别名-----</view>
+<block wx:for='{{nums}}' wx:for-item='inner_list' wx:for-index='inner_list_index'>
+<view>{{inner_list_index+1}}</view>
+  <block wx:for='{{inner_list}}' wx:for-index='out_list_index'>
+    <view>{{ item}}--{{out_list_index}}</view>
+  </block>
+</block>
+
+<!-- key的作用  提升性能 ,前提是遍历元素内无重复元素 如【'a','b','a','c','c'则对性能无提升】-->
+<view>----key---------</view>
+<block class='container'>
+  <!-- 将item作为遍历的key -->
+  <view wx:for='{{letters}}' wx:key='{{item}}'>{{item}}</view>
+</block>
+
+<!--  letters=['a','b','c'],如果要在a,ba之间插入一个元素x变成['a','x','b','c']
+
+  没有key的底层运算情况如下：
+        container
+            /
+          / | \
+        /   |   \
+        a   b    c
+        a   x    b   c  除了a不变，后面其余元素都会改变，运算比较消耗性能
+
+  有key的情况
+        container
+            /
+          / | \
+        /   |   \
+        a   b    c
+        a   b    c   x
+            \        |
+              \      |
+                \    |
+                  \  |   
+      key的作用：相当于给每个元素绑定一个id,进行插入操作时，先对比id，
+      id无变化时，直接对数据进行复用，再创建新数据并插入到正确位置，运算更快
+        
+
+ -->
+
+ <!-- template 模板中的内容在没有使用时是不会渲染出来的-->
+ <view>------template--------</view>
+ <template name='content_template'>
+    <button>按钮</button>
+    <image src="/icons/python.jpg"></image>
+ </template>
+
+<!-- 使用is来使用模板 -->
+ <template is='content_template'></template>
+
+ <!-- 使用mustache语法动态往模板中传值 -->
+
+ <template name="d_m_template">
+    <text>{{text_content}}</text>
+    <image src="{{image_src}}" mode="widthFix" show-menu-by-longpress='{{true}}'></image>
+ </template>
+
+ <template is='d_m_template' data='{{text_content:"哈哈哈",image_src:"/icons/logo.jpg"}}'></template>
+ <template is='d_m_template' data='{{text_content:"嘻嘻嘻",image_src:"/icons/home_1.png"}}'></template>
+ <template is='d_m_template' data='{{text_content:"呵呵呵",image_src:"/icons/category_1.png"}}'></template>
+
+ <view>----template模板的导入</view>
+
+<!-- 导入模板 一个模板，任意位置的wxml文件都可以导入使用-->
+<import src='/pages/mustache/template.wxml'/>
+ <template is='import_template' data='{{btnText:"确定",textContent:"文本内容aaaaaaaa"}}'></template>
+ <template is='import_template' data='{{btnText:"提交",textContent:"文本内容bbbbb"}}'></template>
+ <template is='import_template' data='{{btnText:"重置",textContent:"文本内容cccccc"}}'></template>

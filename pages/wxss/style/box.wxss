@@ -1,0 +1,11 @@
+.view1{
+  width: 100px;
+  height: 100px;
+  background-color: #ACBDF5;
+}
+.view2{
+  margin-top:40rpx; 
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #CFDDDD
+}

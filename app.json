@@ -1,6 +1,8 @@
 
 {
   "pages": [
+    "pages/mustache/mustache",
+    "pages/wxss/wxss",
     "pages/scrollView/scrollView",
     "pages/input/input",
     "pages/image/image",
@@ -9,8 +11,6 @@
     "pages/text/text",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/home/home",
-    "pages/about/about",
     "pages/category/category"
 
   ],

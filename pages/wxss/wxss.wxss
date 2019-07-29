@@ -1,0 +1,23 @@
+/* pages/wxss/wxss.wxss */
+@import '/pages/wxss/style/box.wxss';
+@import '/pages/wxss/style/content.wxss';
+/* .view1{
+  width: 100px;
+  height: 100px;
+  background-color: #ACBDF5;
+}
+.view2{
+  margin-top:40rpx; 
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #CFDDDD
+}
+
+.content1{
+  font-size: 32px;
+}
+.content2{
+  font-size: 64rpx;
+} */
+
+

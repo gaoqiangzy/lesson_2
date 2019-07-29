@@ -1,0 +1,5 @@
+<template name='import_template'>
+  <button size="mini">{{btnText}}</button>
+  <text >{{textContent}}</text>
+</template>
+
