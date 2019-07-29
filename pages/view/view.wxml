@@ -1,0 +1,7 @@
+<!--pages/view/view.wxml-->
+<view class='box'>哈哈哈</view>
+<view>呵呵呵</view>
+
+<view class='box2' hover-class="box2-hover"  hover-stay-time="50">
+  <view class='box1' hover-class="hover-view" hover-stay-time="50" hover-stop-propagation='{{true}}'>box1</view>
+</view>

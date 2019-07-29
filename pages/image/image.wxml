@@ -1,0 +1,15 @@
+<!--pages/image/image.wxml-->
+
+<!-- image有默认大小 320 * 240 -->
+<!-- Image是行内块级元素 -->
+<image class="jzx"  src="http://175.6.73.20/images/wechat/lesson_2/01.png" mode="widthFix"/>
+<button bindtap="handleChooseImage" >打开图片</button>
+<image src="{{imagePath}}"></image>
+<view>---------------------</view>
+
+<image src="/icons/logo.jpg" mode="widthFix" show-menu-by-longpress='{{true}}'/>
+<image wx:for='{{10}}' bindload="handleLoadImage" mode='widthFix'
+        src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+        lazy-load="{{true}}"
+/>
+

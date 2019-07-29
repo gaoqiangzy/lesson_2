@@ -1,0 +1,29 @@
+/* pages/scrollView/scrollView.wxss */
+.contailner1{
+  background-color: #BF6984;
+  /* 容器内元素不换行 */
+  white-space: nowrap; 
+}
+.view1{
+  background-color: #CEA5B5;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+}
+
+.contailner2{
+  margin-top: 20px;
+  height: 200px;
+  background-color: #CCA8B6
+}
+.view2{
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #B796AB;
+}

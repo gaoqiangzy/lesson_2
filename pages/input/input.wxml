@@ -1,0 +1,28 @@
+<!--pages/input/input.wxml-->
+<!-- input的基本使用 -->
+<input/>
+
+<!-- value属性 -->
+<input value="inpput"></input>
+
+<!-- type 决定键盘类型 (文本、数字、身份证、带小数点数字)-->
+<input type="text"/>
+<input type="number"/>
+<input type="idcard"/>
+<input type="digit"/>
+
+<!-- password 暗文形式 -->
+<input password="{{true}}"/>
+
+<!-- placeholder 占位符 -->
+<input placeholder="请输入内容" confirm-type="send"/>
+
+<!-- inout绑定事件 -->
+<input bindinput="handerBindInput"
+       bindfocus="handerBindFocus"
+       bindblur="handerBindBlur" placeholder="input绑定事件"/>
+
+<input value="{{inputText}}"/>
+
+
+

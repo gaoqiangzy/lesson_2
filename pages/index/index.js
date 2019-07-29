@@ -41,21 +41,21 @@ Page({
   },
   // 监听页面滚动
   onPageScroll(obj){
-    console.log(obj)
+    // console.log(obj)
   },
   onReachBottom(){
-    console.log("页面滚动到底部")
+    // console.log("页面滚动到底部")
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    console.log("下拉刷新")
+    // console.log("下拉刷新")
   },
   onTabItemTap(item) {
-    console.log(item.index)
-    console.log(item.pagePath)
-    console.log(item.text)
+    // console.log(item.index)
+    // console.log(item.pagePath)
+    // console.log(item.text)
   }
  
 }

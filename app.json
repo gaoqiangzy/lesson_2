@@ -1,6 +1,12 @@
 
 {
   "pages": [
+    "pages/scrollView/scrollView",
+    "pages/input/input",
+    "pages/image/image",
+    "pages/view/view",
+    "pages/button/button",
+    "pages/text/text",
     "pages/index/index",
     "pages/logs/logs",
     "pages/home/home",
@@ -28,6 +34,24 @@
     {
       "pagePath": "pages/category/category",
       "text": "分類",
+      "iconPath": "/icons/category_1.png",
+      "selectedIconPath": "/icons/category_2.png"
+    },
+    {
+      "pagePath": "pages/image/image",
+      "text": "图片",
+      "iconPath": "/icons/category_1.png",
+      "selectedIconPath": "/icons/category_2.png"
+    },
+    {
+      "pagePath": "pages/scrollView/scrollView",
+      "text": "滚动",
+      "iconPath": "/icons/category_1.png",
+      "selectedIconPath": "/icons/category_2.png"
+    },
+    {
+      "pagePath": "pages/input/input",
+      "text": "输入框",
       "iconPath": "/icons/category_1.png",
       "selectedIconPath": "/icons/category_2.png"
     }

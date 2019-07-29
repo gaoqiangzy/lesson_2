@@ -1,0 +1,13 @@
+<!--pages/scrollView/scrollView.wxml-->
+<!-- scroll-x  水平滚动 -->
+<scroll-view class="contailner1" scroll-x='{{true}}'>
+  <view class="view1" wx:for='{{10}}'>{{item}}</view>
+</scroll-view>
+
+<!-- scroll-y  垂直滚动 -->
+
+<!-- upper-threshold 距顶部/左边多远时，触发 scrolltoupper 事件 -->
+<!-- lower-threshold 距底部/右边多远时，触发 scrolltolower 事件 -->
+<scroll-view class="contailner2" scroll-y='{{true}}' bindscroll='handlerScroll' upper-threshold lower-threshold bindscrolltoupper='handlerScrollUpper' bindscrolltolower="handlerScrollLower">
+  <view class="view2" wx:for='{{10}}'>{{item}}</view>
+</scroll-view>
