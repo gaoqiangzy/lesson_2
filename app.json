@@ -1,6 +1,8 @@
 
 {
   "pages": [
+    "pages/wxs/wxs",
+    "pages/include/include",
     "pages/mustache/mustache",
     "pages/wxss/wxss",
     "pages/scrollView/scrollView",

@@ -1,0 +1,21 @@
+
+var msg = "我是外部wxs文件中的msg";
+var name = "李四";
+
+var multiply = function (num1, num2) {
+  return num1 * num2
+}
+
+var priceToFixed=function(price,num){
+  var num = num | 2;
+  var f_price=parseFloat(num);
+  return price.toFixed(num)
+}
+
+
+module.exports = {
+  msg: msg,
+  name: name,
+  multiply: multiply,
+  priceToFixed: priceToFixed
+}

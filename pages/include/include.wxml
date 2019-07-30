@@ -1,0 +1,16 @@
+<!--pages/include/include.wxml-->
+<!-- 导入header頁面 -->
+<include src="./header.wxml"/>
+
+<view>正文部分</view>
+
+<!-- 导入并使用模板 -->
+<import src="./footer.wxml"/>
+<template is="footerTemplate"></template>
+
+<!-- include不能引入模板，只能使用import，且不能递归导入 
+      include可以将页面导入其他页面使用，能进行递归导入
+-->
+
+
+

@@ -1,0 +1,5 @@
+
+
+<template name="footerTemplate"  >
+  <view style="color:#008822;font-size:50rpx;height:160rpx;line-height:160rpx;text-align:center;">footer</view>
+</template>

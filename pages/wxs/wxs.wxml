@@ -1,0 +1,35 @@
+<!--pages/wxs/wxs.wxml-->
+
+<!-- wxs类似javascript，定义的数据必须导出才能使用 -->
+
+<!-- 第一种定义和使用wxs的方式：直接在wxml文件中定义 -->
+<wxs module="info">
+  var msg="hello wxs";
+  var name="zhangsan";
+
+  var sum = function(num1,num2){
+    return num1+num2
+  }
+
+
+  module.exports={
+    msg:msg,
+    name:name,
+    sum:sum
+  }
+</wxs>
+
+<!-- 用module名。属性名的方式调用 -->
+<view>{{info.msg}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(2,3)}}</view>
+
+<!-- 第二种定义和使用wxs的方式：在外部单独的wxs文件中定义,使用wxs标签引入 -->
+<wxs src="./info.wxs" module="info2"/>
+<view>{{info2.msg}}</view>
+<view>{{info2.name}}</view>
+<view>{{info2.multiply(5,6)}}</view>
+
+
+<!-- wxs的应用 :保留小数点后几位-->
+<view>{{info2.priceToFixed(26.666666,3)}}</view>
