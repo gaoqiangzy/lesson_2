@@ -1,0 +1,10 @@
+<!--componnents/practice-tabbar/practice-tabbar.wxml-->
+<view class="tab-control">
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view class="tab-item {{currentindex==index ? 'active' : ''}}"
+    bind:tap="handleitemclick"
+    data-index="{{index}}"
+    data-item="{{item}}"
+    ><text>{{item}}</text></view>
+  </block>
+</view>

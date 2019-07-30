@@ -1,6 +1,7 @@
 
 {
   "pages": [
+    "pages/home/home",
     "pages/normalEvent/normalEvent",
     "pages/wxs/wxs",
     "pages/include/include",
@@ -24,6 +25,9 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#5566ff",
     "enablePullDownRefresh": true
+  },
+  "usingComponents":{
+    "my-cpn": "/componnents/my-cpn/my-cpn"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

@@ -1,0 +1,3 @@
+<!--componnents/my-style/my-style.wxml-->
+<view class="title">我是my-style的标题</view>
+<view class="content">我是自定义组件my-style的内容</view>

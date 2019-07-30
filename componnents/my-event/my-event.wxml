@@ -1,0 +1,3 @@
+<!--componnents/my-event/my-event.wxml-->
+<!-- <button bind:tap="handleincrement">+1</button> -->
+<button size="mini" bind:tap="handleincrement">+1</button>

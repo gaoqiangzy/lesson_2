@@ -1,0 +1,39 @@
+<!--pages/home/home.wxml-->
+
+<!-- 1. 使用my-cpn自定义组件 
+    注意！自定义组件命名只支持小写字母、下划线、中划线、数字
+-->
+<my-cpn/>
+
+<!--2.  可以在app.json全局环境下注册自定义组件，那么所有的页面中可以直接调用，不需要在页面的json文件中啰嗦注册 -->
+
+<view>-----my-style-----</view>
+
+<!--3. 自定义组件的样式和页面的样式是不会互相干扰的
+     自定义组件的样式只能使用类选择器，不能使用其他选择器，不然会报错
+ -->
+
+<my-style/>
+
+<view>--------my-prop---------</view>
+<!--4. 给自定义组件传值、样式 -->
+<my-prop title="哈哈哈" titleclass="red"/>
+<my-prop title="呵呵呵" titleclass="green"/>
+<my-prop titleclass="yellow"/>
+
+
+<!--5.  自定义事件传递数据 -->
+<view>{{num}}</view>
+<!-- bind:increment  监听my-event组件传出的事件increment -->
+<my-event bind:increment="handleincrement"/>
+
+<view>练习</view>
+<!-- 6. 练习 -->
+
+<practice-tabbar titles="{{['上衣','裤子','鞋子','帽子']}}" bind:handleitemclick="handleitemclick" />
+<text>{{msg}}</text>
+
+<view>----直接选用组件修改数据、调用方法------</view>
+<!-- 7. 直接选中组件修改数据、调用方法  -->
+<button size="mini" bind:tap="handelincrementcpn">修改组件内的数据</button>
+<my-select class="select-class"/>

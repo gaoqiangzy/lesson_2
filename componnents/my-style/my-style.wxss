@@ -1,0 +1,9 @@
+/* componnents/my-style/my-style.wxss */
+
+.title{
+  font-size: 50rpx;
+  color: palevioletred;
+}
+.content{
+  font-size: 40rpx;
+}
