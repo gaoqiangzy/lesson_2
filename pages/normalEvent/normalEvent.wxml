@@ -1,0 +1,56 @@
+<!--pages/normalEvent/normalEvent.wxml-->
+<button size="mini" bindtap="handlebtnclick">bindtap</button>
+<button size="mini" bind:tap="handlebtnclick">bind:ta</button>
+<button size="mini" catchtap="catchtap">tauchtap</button>
+
+
+<!-- 所有组件常用的事件函数
+
+
+ -->
+<view class="box" bindtouchstart="bindtouchstart" 
+                  bindtouchmove="bindtouchmove"
+                  bindtouchend="bindtouchend"
+                  bindtouchcancel="bindtouchcancel"
+                  bindtap="bindtap"
+                  bindlongtap="bindlongtap"
+></view>
+
+<!-- 事件对象分析  changedTouched和touches
+  bindtap事件下：event中的changedTouched和touches中的数据参数是一样的
+  bindtouend事件下：event中changeTouched中有参数，touches无参数
+  结论：touches表示当前触摸屏幕手指个数
+        changedTouches表示触摸屏幕手指的变化数
+
+-->
+<button id="btn" size="mini"
+        bindtap="handleeventclick"
+        bindtouchend="handleeventend"
+>事件对象</button>
+
+
+<!-- target和currentTarget 
+     当点击outter时，只有outter的点击事件触发，event中currentTarget和target中的对象是同一个(outter)
+     当点击inner时，inner和outter的点击事件都触发,inner的event中currentTarget和target的对象都是inner
+                                                outter的event中currentTarget是outter,target是inner
+      结论：target是产生事件的view,currentTarget是触发事件的view
+
+-->
+<view id="outter" bindtap="handleoutter">
+  <view id="inner" bindtap="handleinner"></view>
+</view>
+
+
+<!-- 事件的传递参数 
+    使用data- + 变量名 = “{{参数名}}” 进行传值
+    参数会放在event中currentTarget中的dataset中
+-->
+<view class="container">
+  <block wx:for="{{clothes}}" wx:key="index">
+    <view class="item"
+          bindtap="handleitemclick"
+          data-index="{{index}}"
+          data-item="{{item}}"
+    >{{item}}</view>
+  </block>
+</view>

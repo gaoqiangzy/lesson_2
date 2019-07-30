@@ -1,6 +1,7 @@
 
 {
   "pages": [
+    "pages/normalEvent/normalEvent",
     "pages/wxs/wxs",
     "pages/include/include",
     "pages/mustache/mustache",
