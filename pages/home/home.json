@@ -4,7 +4,9 @@
     "my-prop": "/componnents/my-prop/my-prop",
     "my-event": "/componnents/my-event/my-event",
     "practice-tabbar":"/componnents/practice-tabbar/practice-tabbar",
-    "my-select":"/componnents/my-select/my-select"
+    "my-select":"/componnents/my-select/my-select",
+    "my-slot":"/componnents/my-slot/my-slot",
+    "my-mslot":"/componnents/my-mslot/my-mslot"
     
   }
 }

@@ -37,3 +37,25 @@
 <!-- 7. 直接选中组件修改数据、调用方法  -->
 <button size="mini" bind:tap="handelincrementcpn">修改组件内的数据</button>
 <my-select class="select-class"/>
+
+
+<view>-------------------slot-------------------</view>
+<!-- 8. 插槽的定义与使用
+        slot插槽可以在组件中预留一个位置，使用双标签调用组件时，可以在预留位置添加内容
+ -->
+<my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+
+<my-slot>
+  <text>我是插入的文本</text>
+</my-slot>
+
+
+<!--8.2 多插槽的使用 -->
+
+<my-mslot>
+    <slider slot="slot3" value="30"></slider>
+    <button slot="slot1"size="mini" >我是插入的按钮</button>
+    <image slot="slot2" mode="widthFix"  src="http://175.6.73.20/images/wechat/lesson_2/01.png"/>
+</my-mslot>
