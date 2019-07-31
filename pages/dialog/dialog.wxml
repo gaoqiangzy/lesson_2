@@ -1,0 +1,15 @@
+<!--pages/dialog/dialog.wxml-->
+<view>四种弹窗演示</view>
+<button>mask测试</button>
+
+<!-- 1.toast -->
+<button bind:tap="handleShowToast">showToast</button>
+
+<!-- 2.modal -->
+<button bind:tap="handleShowModal">showModal</button>
+
+<!-- 3. showLoading -->
+<button bind:tap="handleShowLoading">showLoading</button>
+
+<!-- 4. showActionSheet -->
+<button bind:tap="handleShowActionSheet">showActionSheet</button>

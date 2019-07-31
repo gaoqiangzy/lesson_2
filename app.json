@@ -1,6 +1,6 @@
-
 {
   "pages": [
+    "pages/dialog/dialog",
     "pages/requestTest/requestTest",
     "pages/home/home",
     "pages/normalEvent/normalEvent",
@@ -17,7 +17,6 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/category/category"
-
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -26,45 +25,44 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#5566ff",
     "enablePullDownRefresh": true
-
   },
-  "usingComponents":{
+  "usingComponents": {
     "my-cpn": "/componnents/my-cpn/my-cpn"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "selectedColor": "#ff5777",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "主頁",
-      "iconPath": "/icons/home_1.png",
-      "selectedIconPath": "/icons/home_2.png"
-    },
-    {
-      "pagePath": "pages/category/category",
-      "text": "分類",
-      "iconPath": "/icons/category_1.png",
-      "selectedIconPath": "/icons/category_2.png"
-    },
-    {
-      "pagePath": "pages/image/image",
-      "text": "图片",
-      "iconPath": "/icons/category_1.png",
-      "selectedIconPath": "/icons/category_2.png"
-    },
-    {
-      "pagePath": "pages/scrollView/scrollView",
-      "text": "滚动",
-      "iconPath": "/icons/category_1.png",
-      "selectedIconPath": "/icons/category_2.png"
-    },
-    {
-      "pagePath": "pages/input/input",
-      "text": "输入框",
-      "iconPath": "/icons/category_1.png",
-      "selectedIconPath": "/icons/category_2.png"
-    }
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主頁",
+        "iconPath": "/icons/home_1.png",
+        "selectedIconPath": "/icons/home_2.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分類",
+        "iconPath": "/icons/category_1.png",
+        "selectedIconPath": "/icons/category_2.png"
+      },
+      {
+        "pagePath": "pages/image/image",
+        "text": "图片",
+        "iconPath": "/icons/category_1.png",
+        "selectedIconPath": "/icons/category_2.png"
+      },
+      {
+        "pagePath": "pages/scrollView/scrollView",
+        "text": "滚动",
+        "iconPath": "/icons/category_1.png",
+        "selectedIconPath": "/icons/category_2.png"
+      },
+      {
+        "pagePath": "pages/input/input",
+        "text": "输入框",
+        "iconPath": "/icons/category_1.png",
+        "selectedIconPath": "/icons/category_2.png"
+      }
     ]
   }
-
 }
