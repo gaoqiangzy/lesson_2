@@ -53,5 +53,7 @@ App({
   globalData:{
     name:'万一啊',
     age:23
-  }
+  },
+
+  
 })

@@ -1,0 +1,4 @@
+<!--pages/shareTest/shareTest.wxml-->
+<view>分享测试</view>
+<!-- 将open-type设置为share 点击按钮后自动弹出分享框 -->
+<button size="mini" open-type="share">分享按钮</button>
