@@ -1,6 +1,7 @@
 
 {
   "pages": [
+    "pages/requestTest/requestTest",
     "pages/home/home",
     "pages/normalEvent/normalEvent",
     "pages/wxs/wxs",
@@ -25,6 +26,7 @@
     "navigationBarTextStyle": "white",
     "backgroundColor": "#5566ff",
     "enablePullDownRefresh": true
+
   },
   "usingComponents":{
     "my-cpn": "/componnents/my-cpn/my-cpn"

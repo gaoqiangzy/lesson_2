@@ -1,0 +1,5 @@
+<!--pages/request/request.wxml-->
+<block wx:for="{{list}}" wx:key="index">
+  <view>{{item.title}}</view>
+  <image src="{{item.image}}" mode="widthFix"></image>
+</block>
