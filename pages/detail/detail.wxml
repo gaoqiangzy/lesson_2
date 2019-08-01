@@ -1,0 +1,7 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+
+<!-- 跳转到评论页 -->
+<navigator url="/pages/about/about">跳转到评论页</navigator>
+
+<navigator open-type="navigateBack">返回</navigator>

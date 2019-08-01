@@ -1,0 +1,24 @@
+<!--pages/navigator/navigator.wxml-->
+<!-- 普通跳转 -->
+<navigator url="/pages/dialog/dialog">跳转到dialog</navigator>
+
+<!-- 重新加载 -->
+<navigator url="/pages/navigator/navigator" open-type="reLaunch">重新加载页面</navigator>
+
+<!-- redirect 跳转到非tarbar页面 -->
+<navigator url="/pages/include/include" open-type="redirect">跳转到include页</navigator>
+
+<!-- 跳转到tabbar页面 ,不加 open-type="switchTab" 无法跳转-->
+<navigator url="/pages/index/index" open-type="switchTab">跳转到主页(switchTab)</navigator>
+
+<!-- 通过Button进行跳转 -->
+<button size="mini" bind:tap="handleBtnNgt">跳转到自定义组件练习页(btn)</button>
+
+<!-- 跳转到详情页 -->
+<navigator url="/pages/detail/detail">跳转到详情页</navigator>
+
+<!-- 跳转到详情页并传递数据 -->
+
+<navigator url="/pages/detail/detail?name='张三'&age=21">跳转到详情页并传递数据且从详情页返回数据将哈哈哈改为嘿嘿嘿</navigator>
+
+<view>{{title}}</view>

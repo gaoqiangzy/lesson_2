@@ -12,5 +12,8 @@
       include可以将页面导入其他页面使用，能进行递归导入
 -->
 
+<navigator url="/pages/normalEvent/normalEvent" >跳转到normalEvent</navigator>
+
+
 
 

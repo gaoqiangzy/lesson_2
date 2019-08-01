@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/navigator/navigator",
+    "pages/about/about",
+    "pages/detail/detail",
     "pages/loginTest/loginTest",
     "pages/shareTest/shareTest",
     "pages/dialog/dialog",
@@ -59,9 +62,10 @@
         "iconPath": "/icons/category_1.png",
         "selectedIconPath": "/icons/category_2.png"
       },
+      
       {
-        "pagePath": "pages/input/input",
-        "text": "输入框",
+        "pagePath": "pages/navigator/navigator",
+        "text": "跳转",
         "iconPath": "/icons/category_1.png",
         "selectedIconPath": "/icons/category_2.png"
       }
